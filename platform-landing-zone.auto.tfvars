@@ -24,26 +24,26 @@ custom_replacements = {
   */
   names = {
     # Defender email security contact
-    defender_email_security_contact = "replace_me@replace_me.com"
+    defender_email_security_contact = "pdevadiga@microsoft.com"
 
     # Resource group names
-    management_resource_group_name               = "rg-management-$${starter_location_01}"
-    connectivity_hub_vwan_resource_group_name    = "rg-hub-vwan-$${starter_location_01}"
-    connectivity_hub_primary_resource_group_name = "rg-hub-$${starter_location_01}"
-    dns_resource_group_name                      = "rg-hub-dns-$${starter_location_01}"
-    ddos_resource_group_name                     = "rg-hub-ddos-$${starter_location_01}"
-    asc_export_resource_group_name               = "rg-asc-export-$${starter_location_01}"
+    management_resource_group_name               = "cx-lz-management-$${starter_location_01}"
+    connectivity_hub_vwan_resource_group_name    = "cx-lz-hub-vwan-$${starter_location_01}"
+    connectivity_hub_primary_resource_group_name = "cx-lz-hub-$${starter_location_01}"
+    dns_resource_group_name                      = "cx-lz-hub-dns-$${starter_location_01}"
+    ddos_resource_group_name                     = "cx-lz-hub-ddos-$${starter_location_01}"
+    asc_export_resource_group_name               = "cx-lz-asc-export-$${starter_location_01}"
 
     # Resource names
-    log_analytics_workspace_name            = "law-management-$${starter_location_01}"
-    ddos_protection_plan_name               = "ddos-$${starter_location_01}"
-    ama_user_assigned_managed_identity_name = "uami-management-ama-$${starter_location_01}"
-    dcr_change_tracking_name                = "dcr-change-tracking"
-    dcr_defender_sql_name                   = "dcr-defender-sql"
-    dcr_vm_insights_name                    = "dcr-vm-insights"
+    log_analytics_workspace_name            = "cx-lz-law-management-$${starter_location_01}"
+    ddos_protection_plan_name               = "cx-lz-ddos-$${starter_location_01}"
+    ama_user_assigned_managed_identity_name = "cx-lz-uami-management-ama-$${starter_location_01}"
+    dcr_change_tracking_name                = "cx-lz-dcr-change-tracking"
+    dcr_defender_sql_name                   = "cx-lz-dcr-defender-sql"
+    dcr_vm_insights_name                    = "cx-lz-dcr-vm-insights"
 
     # Resource provisioning global connectivity
-    ddos_protection_plan_enabled = true
+    ddos_protection_plan_enabled = false
 
     # Resource provisioning primary connectivity
     primary_firewall_enabled                              = true
@@ -52,22 +52,22 @@ custom_replacements = {
     primary_private_dns_zones_enabled                     = true
     primary_private_dns_auto_registration_zone_enabled    = true
     primary_private_dns_resolver_enabled                  = true
-    primary_bastion_enabled                               = true
+    primary_bastion_enabled                               = false
     primary_sidecar_virtual_network_enabled               = true
 
     # Resource names primary connectivity
-    primary_hub_name                                   = "vwan-hub-$${starter_location_01}"
-    primary_sidecar_virtual_network_name               = "vnet-sidecar-$${starter_location_01}"
-    primary_firewall_name                              = "fw-hub-$${starter_location_01}"
-    primary_firewall_policy_name                       = "fwp-hub-$${starter_location_01}"
-    primary_virtual_network_gateway_express_route_name = "vgw-hub-er-$${starter_location_01}"
-    primary_virtual_network_gateway_vpn_name           = "vgw-hub-vpn-$${starter_location_01}"
-    primary_private_dns_resolver_name                  = "pdr-hub-dns-$${starter_location_01}"
-    primary_bastion_host_name                          = "bas-hub-$${starter_location_01}"
-    primary_bastion_host_public_ip_name                = "pip-bastion-hub-$${starter_location_01}"
+    primary_hub_name                                   = "cx-lz-vwan-hub-$${starter_location_01}"
+    primary_sidecar_virtual_network_name               = "cx-lz-vnet-sidecar-$${starter_location_01}"
+    primary_firewall_name                              = "cx-lz-fw-hub-$${starter_location_01}"
+    primary_firewall_policy_name                       = "cx-lz-fwp-hub-$${starter_location_01}"
+    primary_virtual_network_gateway_express_route_name = "cx-lz-vgw-hub-er-$${starter_location_01}"
+    primary_virtual_network_gateway_vpn_name           = "cx-lz-vgw-hub-vpn-$${starter_location_01}"
+    primary_private_dns_resolver_name                  = "cx-lz-pdr-hub-dns-$${starter_location_01}"
+    primary_bastion_host_name                          = "cx-lz-bas-hub-$${starter_location_01}"
+    primary_bastion_host_public_ip_name                = "cx-lz-pip-bastion-hub-$${starter_location_01}"
 
     # Private DNS Zones primary
-    primary_auto_registration_zone_name = "$${starter_location_01}.azure.local"
+    primary_auto_registration_zone_name = "cx-lz-$${starter_location_01}.azure.local"
 
     # IP Ranges Primary
     # Regional Address Space: 10.0.0.0/16
@@ -349,4 +349,5 @@ virtual_hubs = {
       */
     }
   }
+
 }
