@@ -1,14 +1,14 @@
 name: alz_custom
 management_groups:
   - id: alz
-    display_name: Azure Landing Zones
+    display_name: CX Landing Zone 
     archetypes:
       - root_custom
     exists: false
     parent_id: null
 
   - id: platform
-    display_name: Platform
+    display_name: CX Platform
     archetypes:
       - platform_custom
     exists: false
@@ -21,15 +21,15 @@ management_groups:
     exists: false
     parent_id: alz
 
-  - id: corp
-    display_name: Corp
+  - id: aiplatform
+    display_name: AI Platform
     archetypes:
       - corp_custom
     exists: false
     parent_id: landingzones
 
-  - id: online
-    display_name: Online
+  - id: aiapplication
+    display_name: AI Applications
     archetypes:
       - online_custom
     exists: false
@@ -43,28 +43,28 @@ management_groups:
     parent_id: alz
 
   - id: security
-    display_name: Security
+    display_name: CX Security
     archetypes:
       - security_custom
     exists: false
     parent_id: platform
 
   - id: management
-    display_name: Management
+    display_name: CX Management
     archetypes:
       - management_custom
     exists: false
     parent_id: platform
 
   - id: connectivity
-    display_name: Connectivity
+    display_name: CX Connectivity
     archetypes:
       - connectivity_custom
     exists: false
     parent_id: platform
 
   - id: identity
-    display_name: Identity
+    display_name: CX Identity
     archetypes:
       - identity_custom
     exists: false
@@ -76,3 +76,4 @@ management_groups:
       - decommissioned_custom
     exists: false
     parent_id: alz
+
